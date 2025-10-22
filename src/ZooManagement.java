@@ -1,19 +1,19 @@
 public class ZooManagement {
     public static void main(String[] args) {
-        Animal lion = new Animal();
-        lion.family = "Felidae";
-        lion.name = "Simba";
-        lion.age = 5;
-        lion.isMammal = true;
+        // taw nkhallou les animaux s7i7in direct b constructeur
+        Animal lion = new Animal("felidae", "simba", 5, true);
+        Animal tiger = new Animal("felidae", "shere khan", 7, true);
 
-        Zoo myZoo = new Zoo();
-        myZoo.name = "Wildlife Park";
-        myZoo.city = "Ariana";
-        myZoo.nbrCages = 25;
+        // zoo b constructeur paramétré
+        Zoo myZoo = new Zoo("wildlife park", "ariana", 25);
 
+        // n7ott les animaux fil tableau
         myZoo.animals[0] = lion;
+        myZoo.animals[1] = tiger;
 
-        System.out.println("Zoo: " + myZoo.name + " (" + myZoo.city + "), cages=" + myZoo.nbrCages);
-        System.out.println("First animal: " + myZoo.animals[0].name);
+        // affichage simple
+        System.out.println("zoo: " + myZoo.name + " fi " + myZoo.city);
+        System.out.println("1er animal: " + myZoo.animals[0].name);
+        System.out.println("2ème animal: " + myZoo.animals[1].name);
     }
 }
