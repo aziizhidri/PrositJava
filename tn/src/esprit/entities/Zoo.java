@@ -115,15 +115,8 @@ public class Zoo {
         }
         System.out.println("Dolphins: " + dolphins + " | Penguins: " + penguins);
     }
-    // Instruction 30: count aquatics by type
-    public void displayNumberOfAquaticsByType() {
-        int dolphins = 0, penguins = 0;
-        for (int i = 0; i < aquaticCount; i++) {
-            if (aquaticAnimals[i] instanceof Dolphin) dolphins++;
-            else if (aquaticAnimals[i] instanceof Penguin) penguins++;
-        }
-        System.out.println("Dolphins: " + dolphins + " | Penguins: " + penguins);
-    }
+
+`
 
 
     public void displayZoo() {
