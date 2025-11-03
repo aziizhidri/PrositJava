@@ -7,6 +7,9 @@ public class Zoo {
     private String name;
     private String city;
     private int nbAnimaux;
+    private Aquatic[] aquaticAnimals = new Aquatic[10];
+    private int aquaticCount = 0;
+
 
     // constructors
     public Zoo() {
