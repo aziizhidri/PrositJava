@@ -4,22 +4,35 @@ import esprit.entities.*;
 
 public class ZooManagement {
     public static void main(String[] args) {
-        // Instruction 22/23: parameterized constructors (full)
-        Aquatic aq = new Aquatic("Fish", "Nemo", 1, false, "Sea");
-        Dolphin d = new Dolphin("Mammal", "Flipper", 3, true, "Ocean", 25.5f);
-        Penguin p = new Penguin("Bird", "Skipper", 2, false, "Antarctica", 18.0f);
+        // creation zoo
+        Zoo zoo1 = new Zoo("Esprit Zoo", "Tunis");
+        Zoo zoo2 = new Zoo("Safari Park", "Sousse"); // kept for future use
 
-        // Show results (Instruction 23: toString)
-        System.out.println(aq);
-        System.out.println(d);
-        System.out.println(p);
 
-        // ✅ POLYMORPHISM DEMO
-        System.out.println("--- polymorphism demo ---");
-        Aquatic[] animals = { aq, d, p }; // All declared as Aquatic
+        Dolphin d1 = new Dolphin("Mammal", "Flipper", 3, true, "Ocean", 25.5f);
+        Dolphin d2 = new Dolphin("Mammal", "Echo",    5, true, "Sea",   30.0f);
+        Penguin p1 = new Penguin("Bird",   "Skipper", 2, false, "Antarctica", 18.0f);
 
-        for (Aquatic a : animals) {
-            a.swim();  // the same call produces different behavior
-        }
+        // add these mfs to (zoo1)
+        zoo1.addAquaticAnimal(d1);
+        zoo1.addAquaticAnimal(d2);
+        zoo1.addAquaticAnimal(p1);
+
+        System.out.println("\nAquatics added to " + zoo1.getName() + "."); // if getName() exists
+
+        // --- older tests ---
+        //
+        // // default constructors (null/0 demo)
+        // Aquatic aq0 = new Dolphin();
+        // Terrestrial t0 = new Terrestrial();
+        // System.out.println(aq0);
+        // System.out.println(t0);
+        //
+        // // quick polymorphism check
+        // Aquatic[] list = {
+        //     new Dolphin("Ocean", 25.5f),
+        //     new Penguin("Antarctica", 18.0f)
+        // };
+        // for (Aquatic a : list) a.swim();
     }
 }

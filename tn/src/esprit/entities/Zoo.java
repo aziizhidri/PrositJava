@@ -38,6 +38,16 @@ public class Zoo {
         animals[nbAnimaux++] = a;
         return true;
     }
+    public void addAquaticAnimal(Aquatic aquatic) {
+        if (aquaticCount >= aquaticAnimals.length) {
+            System.out.println("Cannot add more aquatic animals: capacity full (10).");
+        } else {
+            aquaticAnimals[aquaticCount] = aquatic;
+            aquaticCount++;
+            System.out.println(aquatic.getName() + " added to aquatic zone of zoo " + this.name);
+        }
+    }
+
 
     public void afficherAnimaux() {
         if (nbAnimaux == 0) {
