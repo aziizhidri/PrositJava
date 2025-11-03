@@ -26,4 +26,20 @@ public abstract class Aquatic extends Animal {  // 28
 
     // Instr. 24
     public abstract void swim();
+
+    // Instru. 31
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+
+        Aquatic other = (Aquatic) obj;
+
+        return  this.getName().equals(other.getName()) &&
+                this.getAge() == other.getAge() &&
+                this.habitat.equals(other.habitat);
+    }
+
 }
+

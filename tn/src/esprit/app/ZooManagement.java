@@ -26,6 +26,12 @@ public class ZooManagement {
         System.out.println("\nMax penguin swimming depth = " + zoo1.maxPenguinSwimmingDepth() + " meters");
         // Ins 30
         zoo1.displayNumberOfAquaticsByType();
+        // Ins 31
+        Penguin pTest1 = new Penguin("Bird", "Skipper", 2, false, "Antarctica", 18.0f);
+        Penguin pTest2 = new Penguin("Bird", "Skipper", 2, false, "Antarctica", 12.0f);
+
+        System.out.println("\nAre p1 and pTest1 equal? " + p1.equals(pTest1)); // true
+        System.out.println("Are pTest1 and pTest2 equal? " + pTest1.equals(pTest2)); // true
 
 
         // --- older tests ---
