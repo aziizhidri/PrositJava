@@ -24,6 +24,8 @@ public class ZooManagement {
         zoo1.makeAllAquaticsSwim();
         // Ins 29
         System.out.println("\nMax penguin swimming depth = " + zoo1.maxPenguinSwimmingDepth() + " meters");
+        // Ins 30
+        zoo1.displayNumberOfAquaticsByType();
 
 
         // --- older tests ---

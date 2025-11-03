@@ -104,8 +104,18 @@ public class Zoo {
                 }
             }
         }
-        return found ? maxDepth : 0.0f; // return 0 if no penguins found
+        return found ? maxDepth : 0.0f; // return 0
     }
+    // Instruction 30: count aquatic
+    public void displayNumberOfAquaticsByType() {
+        int dolphins = 0, penguins = 0;
+        for (int i = 0; i < aquaticCount; i++) {
+            if (aquaticAnimals[i] instanceof Dolphin) dolphins++;
+            else if (aquaticAnimals[i] instanceof Penguin) penguins++;
+        }
+        System.out.println("Dolphins: " + dolphins + " | Penguins: " + penguins);
+    }
+
 
     public void displayZoo() {
         System.out.println("ism el zoo: " + name);
