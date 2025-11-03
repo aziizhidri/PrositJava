@@ -18,6 +18,9 @@ public class Penguin extends Aquatic {
     public void swim() {
         System.out.println("This aquatic animal is swimming.");
     }
+    public float getSwimmingDepth() {
+        return swimmingDepth;
+    }
 
     public String toString() {
         return super.toString() + ", swimmingDepth=" + swimmingDepth + "}";

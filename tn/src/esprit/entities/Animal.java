@@ -11,7 +11,7 @@ public class Animal {
     public Animal(String family, String name, int age, boolean mammal) {
         this.family = family;
         this.name = name;
-        setAge(age); // ✅ Instr. 18: no negative ages
+        setAge(age); // Instr. 18: no negative ages
         this.mammal = mammal;
     }
 

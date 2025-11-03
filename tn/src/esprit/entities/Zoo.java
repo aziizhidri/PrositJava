@@ -82,13 +82,29 @@ public class Zoo {
         return true;
     }
 
-    // ✅ Instruction 15
+    //  Instruction 15
     public boolean isFull() { return nbAnimaux >= NBR_CAGES; }
 
     public static Zoo comparer(Zoo z1, Zoo z2) {
         if (z1 == null) return z2;
         if (z2 == null) return z1;
         return (z1.nbAnimaux >= z2.nbAnimaux) ? z1 : z2;
+    }
+    // Instruction 29: get max swimming depth among penguins
+    public float maxPenguinSwimmingDepth() {
+        float maxDepth = 0.0f;
+        boolean found = false;
+
+        for (int i = 0; i < aquaticCount; i++) {
+            if (aquaticAnimals[i] instanceof Penguin) {
+                float depth = ((Penguin) aquaticAnimals[i]).getSwimmingDepth();
+                if (!found || depth > maxDepth) {
+                    maxDepth = depth;
+                    found = true;
+                }
+            }
+        }
+        return found ? maxDepth : 0.0f; // return 0 if no penguins found
     }
 
     public void displayZoo() {
