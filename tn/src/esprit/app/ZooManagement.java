@@ -18,7 +18,11 @@ public class ZooManagement {
         zoo1.addAquaticAnimal(d2);
         zoo1.addAquaticAnimal(p1);
 
-        System.out.println("\nAquatics added to " + zoo1.getName() + "."); // if getName() exists
+        System.out.println("\nAquatics added to " + zoo1.getName() + ".");
+        // Instruction 27
+        System.out.println();
+        zoo1.makeAllAquaticsSwim();
+
 
         // --- older tests ---
         //

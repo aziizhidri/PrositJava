@@ -1,6 +1,6 @@
 package esprit.entities;
 
-public class Aquatic extends Animal {
+public abstract class Aquatic extends Animal {  // 28
     // Instruction 20
     protected String habitat;
 
@@ -25,7 +25,5 @@ public class Aquatic extends Animal {
     }
 
     // Instr. 24
-    public void swim() {
-        System.out.println("This aquatic animal is swimming.");
-    }
+    public abstract void swim();
 }

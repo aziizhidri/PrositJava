@@ -47,6 +47,13 @@ public class Zoo {
             System.out.println(aquatic.getName() + " added to aquatic zone of zoo " + this.name);
         }
     }
+    // Instruction 27: make all swim
+    public void makeAllAquaticsSwim() {
+        System.out.println("\n--- All aquatic animals are swimming ---");
+        for (int i = 0; i < aquaticCount; i++) {
+            aquaticAnimals[i].swim();  // polymorphic call
+        }
+    }
 
 
     public void afficherAnimaux() {
